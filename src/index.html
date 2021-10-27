@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/88b6e4dd4b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/sass/main.css" />
+    <link rel="icon" type="image/png" href="pics/favicon-32x32.png" />
+    <title>Joel K | webbutvecklare</title>
+  </head>
+  <body>
+    <header>
+      <nav id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="overlay-content">
+          <a href="#section1">Om mig</a>
+          <a href="#section2">Projekt</a>
+          <a href="#section3">Tidigare Jobb</a>
+          <a href="#section4">Kontakt</a>
+        </div>
+      </nav>
+      <div class="stuck">
+        <a href="index.html"><img src="pics/test.png" alt="logo" /></a>
+        <span onclick="openNav()">&#9776;</span>
+      </div>
+    </header>
+    <div class="container">
+      <div class="intro">
+        <h1 id="top">Joel Karlsson, webbutvecklings-student</h1>
+        <img src="pics/avatar.png" alt="picture of me" />
+      </div>
+      <div class="bg">
+        <img src="pics/resp.png" alt="picture of pc and phone" />
+      </div>
+      <section class="about">
+        <h2 id="section1">
+          Hej jag heter Joel!
+          <span id="astro"><i class="fas fa-user-astronaut"></i></span>
+        </h2>
+        <article id="about-me">
+          <p>
+            Jag pluggar just nu sista året som webbutvecklare på
+            Mittuniversitetet. Nedan följer några av de projekt jag gjort samt
+            vilka kurser jag har har läst och vilka som kommer härnäst. På
+            fritiden blir det mycket hockey-tittande, en del träning och
+            promenader!
+            <br />
+            <br />
+            Spana även in mina tidigare arbetsplatser!
+          </p>
+        </article>
+        <section class="knowledge">
+          <article class="design">
+            <span> <i class="fas fa-pencil-ruler"></i></span>
+            <h3>Design</h3>
+            <p>Jag har erfarenhet av dessa designprogram:</p>
+            <ul>
+              <li>Photoshop</li>
+              <li>Adobe Xd</li>
+            </ul>
+            <div class="focus">
+              <h3>Tre saker i fokus:</h3>
+              <i class="fas fa-mobile-alt"></i>
+              <h4>Responsiv design</h4>
+              <i class="fas fa-tachometer-alt"></i>
+              <h4>Optimerade</h4>
+              <i class="fas fa-hands-helping"></i>
+              <h4>Användarvänliga</h4>
+            </div>
+          </article>
+          <article class="code">
+            <span><i class="fas fa-code"></i></span>
+            <h3>Språk</h3>
+            <p>Dessa språk har vi berört under olika kurser:</p>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>SASS</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>PHP</li>
+              <li>SQL</li>
+            </ul>
+            <h3 class="subheading">Utvecklingsmiljö</h3>
+            <ul>
+              <li>Visual Studio Code</li>
+              <li>Github</li>
+              <li>Gulp</li>
+              <li>XAMPP</li>
+            </ul>
+          </article>
+          <article class="location">
+            <i class="fas fa-university"></i>
+            <h3>Kurser</h3>
+            <p>Dessa kurser har jag läst:</p>
+            <div id="courses-output"></div>
+          </article>
+        </section>
+      </section>
+      <section class="projects">
+        <h2 id="section2">Projekt</h2>
+        <div id="projects-output"></div>
+      </section>
+      <section class="work">
+        <h2 id="section3">Tidigare jobb</h2>
+        <div id="work-output"></div>
+      </section>
+      <section class="contact">
+        <h2 id="section4">Kontakt</h2>
+        <form
+          target="_blank"
+          action="https://formsubmit.co/joka2005@student.miun.se"
+          method="POST"
+        >
+          <label for="name">Namn:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Namn.."
+            required
+          />
+          <label for="email">Din E-post:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="E-post.."
+            required
+          />
+          <label for="message">Ditt meddelande:</label>
+          <textarea
+            placeholder="Ditt meddelande.."
+            name="message"
+            id="message"
+            rows="10"
+            required
+          ></textarea>
+          <input type="submit" value="Skicka" />
+        </form>
+      </section>
+    </div>
+    <footer>
+      <a href="#top"><img src="pics/test.png" alt="logo" /></a>
+      <ul>
+        <li>
+          Skapad av Joel Karlsson som projektuppgift för Webbutveckling 3 2021.
+        </li>
+        <li>
+          E-post:
+          <a href="mailto:joka2005@student.miun.se">joka2005@student.miun.se</a>
+        </li>
+      </ul>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

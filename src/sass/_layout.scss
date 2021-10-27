@@ -1,0 +1,493 @@
+@font-face {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  src: url(../fonter/Lato-Regular.ttf);
+}
+body {
+  overflow-x: hidden;
+  font-size: $textSize;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+h1,
+h2 {
+  color: $maincolor;
+}
+// intro bild med mig
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 60vh;
+  img {
+    max-width: 20%;
+    max-height: 20%;
+  }
+}
+// bilden på dator
+.bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  img {
+    max-width: 650px;
+    max-height: 265px;
+    max-width: 100%;
+  }
+}
+// text
+.about {
+  // position: absolute;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  text-align: center;
+  font-size: $textSize;
+  background-color: $maincolor;
+  color: white;
+  padding-top: 60px;
+  // z-index: -1;
+  width: 100%;
+  h2 {
+    margin-bottom: 1%;
+    color: white;
+  }
+
+  #about-me {
+    font-size: $textSize;
+    line-height: 30px;
+    max-width: 100%;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  #astro i {
+    color: #aaccff;
+  }
+}
+.knowledge {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  // z-index: 1;
+  top: 150px;
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  color: black;
+  border-radius: 3%;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+
+  .design {
+    font-size: $textSize;
+    padding: 2%;
+    border-right: 2px solid $maincolor;
+    ul li {
+      margin: 5%;
+      list-style: none;
+    }
+    i {
+      font-size: 3rem;
+      color: $maincolor;
+      margin: 10%;
+    }
+  }
+  .code {
+    font-size: $textSize;
+    padding: 2%;
+
+    p {
+      margin-right: 0.5%;
+    }
+
+    ul li {
+      margin: 5%;
+      list-style: none;
+    }
+    i {
+      font-size: 3rem;
+      color: $maincolor;
+      margin: 10%;
+    }
+  }
+  .location {
+    font-size: $textSize;
+    border-left: 2px solid $maincolor;
+    padding: 2%;
+    overflow-y: scroll;
+    height: 850px;
+
+    h4 {
+      margin-bottom: 2%;
+    }
+    i {
+      font-size: 3rem;
+      color: $maincolor;
+      margin: 10%;
+    }
+
+    // ta bort detta
+    .hide {
+      border-bottom: 2px solid $maincolor;
+
+      ul li {
+        list-style-type: none;
+        margin: 5%;
+      }
+    }
+    .courses {
+      margin: 6%;
+
+      a {
+        text-decoration: none;
+      }
+    }
+    .courses:hover + .hide {
+      display: block;
+    }
+  }
+
+  .subheading {
+    margin-top: 5%;
+    margin-bottom: 2%;
+  }
+  .focus h4 {
+    margin-top: -5%;
+  }
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 9rem 1.5rem;
+  margin-top: 5%;
+  border-bottom: 1px solid rgba(110, 110, 110, 0.315);
+  max-width: 100%;
+}
+// Projekt-output
+#projects-output {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 3%;
+  width: auto;
+  gap: 30px;
+  overflow: hidden;
+
+  .website {
+    position: relative;
+    // width: 50%;
+    display: block;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    border-radius: 3%;
+    margin-bottom: 2%;
+    color: $textColor;
+    font-size: $textSize;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000,
+      5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+
+    img {
+      width: 400px;
+      height: 250px;
+      object-fit: fill;
+      display: block;
+      border-radius: 3%;
+    }
+
+    .project-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: all 0.6s ease-in-out;
+      background-color: $maincolor;
+      border-radius: 3%;
+    }
+  }
+  //detta kan vara för mobil.
+  // .website:active
+  .website :hover {
+    opacity: 1;
+  }
+
+  p {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    line-height: 25px;
+  }
+
+  .findWeb {
+    text-decoration: none;
+    color: $maincolor;
+    border-radius: 290486px;
+    border: 1px solid $textColor;
+    padding: 3%;
+    transition: all 0.6s ease-in-out;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  .findWeb:hover {
+    background-color: $mainHover;
+    cursor: pointer;
+  }
+
+  i {
+    font-size: 15px;
+  }
+}
+
+// jobb
+.work {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  height: auto;
+  max-width: 100%;
+  background-color: $maincolor;
+  color: $maincolor;
+  padding: 5%;
+  text-align: center;
+
+  h2 {
+    color: white;
+    margin-bottom: 5%;
+  }
+  #work-output {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+
+    .work-box {
+      background-color: transparent;
+      width: 250px;
+      height: 250px;
+      perspective: 1000px;
+
+      h3 {
+        margin-top: 30%;
+      }
+    }
+    .flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    .work-box:hover .flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-front,
+    .flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    .flip-front {
+      background-color: white;
+      color: $maincolor;
+      border-radius: 3%;
+    }
+    .flip-back {
+      background-color: $textColor;
+      color: $maincolor;
+      transform: rotateY(180deg);
+      border-radius: 3%;
+
+      ul {
+        margin-top: 30%;
+        list-style: none;
+      }
+    }
+  }
+}
+
+.contact {
+  padding: 9rem 1.5rem;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $maincolor;
+
+  form {
+    color: $maincolor;
+
+    input[type="email"],
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+      font-size: $textSize;
+    }
+
+    input[type="submit"] {
+      background-color: $maincolor;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: $mainHover;
+    }
+  }
+}
+// footer
+footer {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-top: 3px solid $maincolor;
+  text-align: center;
+  font-size: $textSize;
+
+  ul {
+    list-style: none;
+  }
+  img {
+    padding-top: 1%;
+    margin-bottom: 1%;
+  }
+}
+// media queries för mobil
+@media only screen and (max-width: 768px) {
+  // intro-text
+  .intro {
+    padding-top: 20%;
+    img {
+      max-width: 100%;
+    }
+  }
+  .about {
+    #about-me {
+      min-width: 100%;
+    }
+
+    .knowledge {
+      max-width: 92%;
+      .design {
+        border-right: none;
+        border-bottom: 2px solid $maincolor;
+      }
+      .code {
+        border-right: none;
+        border-bottom: 2px solid $maincolor;
+      }
+      .location {
+        border-left: none;
+      }
+    }
+  }
+  .projects {
+    margin-top: 20%;
+
+    #projects-output {
+      flex-direction: column;
+
+      .website {
+        img {
+          max-width: 100%;
+        }
+        .project-overlay {
+          font-size: 1rem;
+          overflow-y: scroll;
+        }
+      }
+    }
+  }
+  .work {
+    .work-box {
+      margin-top: 10%;
+    }
+  }
+}
+
+/* surfplatta */
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+  .intro {
+    padding-top: 10%;
+    img {
+      max-width: 50%;
+    }
+  }
+  .about {
+    #about-me {
+      min-width: 90%;
+    }
+    .knowledge {
+      max-width: 95%;
+      .design {
+        border-right: none;
+        border-bottom: 3px solid $maincolor;
+      }
+      .code {
+        border-right: none;
+        border-bottom: 3px solid $maincolor;
+      }
+      .location {
+        border-left: none;
+      }
+    }
+  }
+  .projects {
+    margin-top: 20%;
+
+    #projects-output {
+      flex-direction: column;
+
+      .website {
+        img {
+          max-width: 100%;
+        }
+        .project-overlay {
+          font-size: 1rem;
+          overflow-y: scroll;
+        }
+      }
+    }
+  }
+  .work {
+    .work-box {
+      margin-top: 10%;
+    }
+  }
+}

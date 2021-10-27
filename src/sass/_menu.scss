@@ -1,0 +1,87 @@
+header {
+  margin-top: 2%;
+  span {
+    cursor: pointer;
+    font-size: 55px;
+    float: right;
+    padding: 20px;
+    color: $maincolor;
+    margin-right: 10%;
+    transition: all 0.3s ease-in-out;
+  }
+  span :hover {
+    transform: scale(2);
+  }
+  img {
+    max-width: 100%;
+    float: left;
+    margin-left: 10%;
+    transition: all 0.2s ease-in-out;
+  }
+  .stuck span:hover {
+    transform: scale(1.3);
+  }
+  .stuck img:hover {
+    transform: scale(1.1);
+  }
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $menuColor;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  z-index: 2;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: $textColor;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    padding-top: 5%;
+    span {
+      font-size: 40px;
+    }
+  }
+  .overlay a {
+    font-size: 1.8rem;
+  }
+  .overlay .closebtn {
+    font-size: 45px;
+    top: 15px;
+    right: 35px;
+  }
+}

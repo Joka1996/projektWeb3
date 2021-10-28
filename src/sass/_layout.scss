@@ -491,3 +491,25 @@ footer {
     }
   }
 }
+// laptop
+@media only screen and (min-width: 900px) and (max-width: 1600px) {
+  .about {
+    #about-me {
+      min-width: 90%;
+    }
+    .knowledge {
+      max-width: 98%;
+      .design {
+        border-right: 3px solid $maincolor;
+        border-bottom: none;
+      }
+      .code {
+        border-right: 3px solid $maincolor;
+        border-bottom: none;
+      }
+      .location {
+        border-left: none;
+      }
+    }
+  }
+}

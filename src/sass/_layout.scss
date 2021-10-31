@@ -68,21 +68,10 @@ h2 {
     font-size: larger;
     text-decoration: none;
   }
-
-  #about-me a::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 1px;
-    background: $textColor;
-    transition: width 0.4s ease-in;
-    margin: 0 auto;
+  #about-me a:hover {
+    border-bottom: 1px solid $textColor;
   }
 
-  #about-me a:hover::after {
-    width: 30%;
-    margin: 0 auto;
-  }
   #about-me i {
     font-size: 2rem;
   }

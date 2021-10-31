@@ -1,4 +1,4 @@
-"user strict";
+"use strict";
 
 // babeltest
 // const foo = (a, b) => a + b;
